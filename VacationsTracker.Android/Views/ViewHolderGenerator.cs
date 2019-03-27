@@ -5,16 +5,31 @@ using Android.App;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using JetBrains.Annotations;
 
 namespace VacationsTracker.Droid.Views
 {
-    /*
-    "activity_login" layout file doesn't contain any view with "android:id" attribute specified. There is no sense in view holder generation.
     public partial class LoginActivityViewHolder
     {
+         private readonly Activity activity;
+
+         private TextView headerTextView;
+         private Button loginButton;
+
+        public LoginActivityViewHolder( Activity activity)
+        {
+            if (activity == null) throw new ArgumentNullException(nameof(activity));
+
+            this.activity = activity;
+        }
+
+        
+        public TextView HeaderTextView =>
+            headerTextView ?? (headerTextView = activity.FindViewById<TextView>(Resource.Id.header_text_view));
+
+        
+        public Button LoginButton =>
+            loginButton ?? (loginButton = activity.FindViewById<Button>(Resource.Id.login_button));
     }
-    */
 
 }
 // ReSharper restore All

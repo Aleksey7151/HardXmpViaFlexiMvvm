@@ -20,7 +20,7 @@
         { "com.github.chrisbanes.photoview.PhotoView", "ImageViews.Photo.PhotoView"}
     };
     LayoutDefinitionOptions.LayoutTypeNamePostfix = "ViewHolder";
-    LayoutDefinitionOptions.GenerateAnnotations = true;
+    LayoutDefinitionOptions.GenerateAnnotations = false;
     var layoutDefinitionsOptions = new List<LayoutDefinitionOptions>
     {
         new LayoutDefinitionOptions("activity_.+", true, "Activity", "activity", false),
