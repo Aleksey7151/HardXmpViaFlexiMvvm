@@ -4,11 +4,11 @@ using FlexiMvvm.Bootstrappers;
 using FlexiMvvm.Ioc;
 using FlexiMvvm.Views;
 using Plugin.CurrentActivity;
-using VacationsTracker.Android.Bootstrappers;
 using VacationsTracker.Core.Bootstrappers;
 using VacationsTracker.Core.Presentation.ViewModels;
+using VacationsTracker.Droid.Bootstrappers;
 
-namespace VacationsTracker.Android.Views
+namespace VacationsTracker.Droid.Views
 {
     [Activity(
         MainLauncher = true,

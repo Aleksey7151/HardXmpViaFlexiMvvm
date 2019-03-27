@@ -3,7 +3,7 @@ using Android.OS;
 using FlexiMvvm.Views;
 using VacationsTracker.Core.Presentation.ViewModels.Login;
 
-namespace VacationsTracker.Android.Views
+namespace VacationsTracker.Droid.Views
 {
     [Activity(Label = "LoginActivity")]
     public class LoginActivity : AppCompatActivity<LoginViewModel>
