@@ -1,12 +1,15 @@
 ﻿using Cirrious.FluentLayouts.Touch;
 using FlexiMvvm.Views;
 using UIKit;
+using VacationsTracker.iOS.Theme;
 
 namespace VacationsTracker.iOS.Views.Login
 {
-    public class LoginView : LayoutView
+    internal class LoginView : ScrollableLayoutView
     {
         private UILabel TitleLabel { get; set; }
+
+        public UIButton LoginButton { get; private set; }
 
         protected override void SetupSubviews()
         {
@@ -14,18 +17,18 @@ namespace VacationsTracker.iOS.Views.Login
 
             BackgroundColor = UIColor.White;
 
-            TitleLabel = new UILabel
-            {
-                Text = "Login View Controller",
-                TextColor = UIColor.Green
-            };
+            //TODO Move to strings
+            TitleLabel = new UILabel().SetTitle1Style("Login Page");
+            LoginButton = new UIButton(UIButtonType.System).SetButton1Style("Login");
         }
 
         protected override void SetupLayout()
         {
             base.SetupLayout();
 
-            this.AddLayoutSubview(TitleLabel);
+            ContentView
+                .AddLayoutSubview(TitleLabel)
+                .AddLayoutSubview(LoginButton);
         }
 
         protected override void SetupLayoutConstraints()
@@ -33,11 +36,18 @@ namespace VacationsTracker.iOS.Views.Login
             base.SetupLayoutConstraints();
 
             this.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+            ContentView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
-            this.AddConstraints(
-                TitleLabel.AtLeftOf(this),
-                TitleLabel.WithSameCenterY(this),
-                TitleLabel.AtRightOf(this));
+            ContentView.AddConstraints(
+                TitleLabel.AtLeftOf(ContentView, AppTheme.Current.Dimens.Inset2x),
+                TitleLabel.AtTopOf(ContentView, AppTheme.Current.Dimens.Inset4x),
+                TitleLabel.AtRightOf(ContentView, AppTheme.Current.Dimens.Inset2x));
+
+            ContentView.AddConstraints(
+                LoginButton.AtLeftOf(ContentView, AppTheme.Current.Dimens.Inset2x),
+                LoginButton.Below(TitleLabel, AppTheme.Current.Dimens.Inset4x),
+                LoginButton.AtRightOf(ContentView, AppTheme.Current.Dimens.Inset2x),
+                LoginButton.AtBottomOf(ContentView, AppTheme.Current.Dimens.Inset2x));
         }
     }
 }

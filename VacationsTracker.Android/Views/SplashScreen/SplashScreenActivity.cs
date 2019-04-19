@@ -8,12 +8,12 @@ using VacationsTracker.Core.Bootstrappers;
 using VacationsTracker.Core.Presentation.ViewModels;
 using VacationsTracker.Droid.Bootstrappers;
 
-namespace VacationsTracker.Droid.Views
+namespace VacationsTracker.Droid.Views.SplashScreen
 {
     [Activity(
         MainLauncher = true,
         NoHistory = true)]
-    public class SplashScreenActivity : AppCompatActivity<EntryViewModel>
+    internal class SplashScreenActivity : AppCompatActivity<EntryViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

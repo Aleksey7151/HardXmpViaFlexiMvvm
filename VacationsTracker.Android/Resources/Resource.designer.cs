@@ -3318,9 +3318,6 @@ namespace VacationsTracker.Droid
 			// aapt resource value: 0x7f0a0010
 			public const int abc_toolbar_collapse_description = 2131361808;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int action_settings = 2131361832;
-			
 			// aapt resource value: 0x7f0a0027
 			public const int app_name = 2131361831;
 			

@@ -2,11 +2,12 @@
 using FlexiMvvm;
 using VacationsTracker.Core.Navigation;
 using VacationsTracker.Core.Presentation.ViewModels;
-using VacationsTracker.Droid.Views;
+using VacationsTracker.Droid.Views.Login;
+using VacationsTracker.Droid.Views.SplashScreen;
 
 namespace VacationsTracker.Droid.Navigation
 {
-    public class NavigationService : FlexiMvvm.Navigation.NavigationService, INavigationService
+    internal class NavigationService : FlexiMvvm.Navigation.NavigationService, INavigationService
     {
         public void NavigateToLogin(EntryViewModel fromViewModel)
         {

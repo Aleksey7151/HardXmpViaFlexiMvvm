@@ -64,6 +64,14 @@
     <Compile Include="Bootstrappers\IosBootstrapper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Theme\AppTheme.cs" />
+    <Compile Include="Theme\AppThemeColors.cs" />
+    <Compile Include="Theme\AppThemeDimens.cs" />
+    <Compile Include="Theme\AppThemeFonts.cs" />
+    <Compile Include="Theme\AppThemeStyles.cs" />
+    <Compile Include="Theme\Light\LightAppTheme.cs" />
+    <Compile Include="Theme\Light\LightAppThemeColors.cs" />
+    <Compile Include="Views\Bindings\CustomBindings.cs" />
     <Compile Include="Views\Login\LoginView.cs" />
     <Compile Include="Views\Login\LoginViewController.cs" />
     <Compile Include="Views\RootNavigationController.cs" />

@@ -6,7 +6,7 @@ using VacationsTracker.iOS.Views.Login;
 
 namespace VacationsTracker.iOS.Navigation
 {
-    public class NavigationService : FlexiMvvm.Navigation.NavigationService, INavigationService
+    internal class NavigationService : FlexiMvvm.Navigation.NavigationService, INavigationService
     {
         public void NavigateToLogin(EntryViewModel fromViewModel)
         {

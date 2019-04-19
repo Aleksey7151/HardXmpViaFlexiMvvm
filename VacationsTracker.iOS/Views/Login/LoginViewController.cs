@@ -4,7 +4,7 @@ using VacationsTracker.Core.Presentation.ViewModels.Login;
 
 namespace VacationsTracker.iOS.Views.Login
 {
-    public class LoginViewController : ViewController<LoginViewModel>
+    internal class LoginViewController : ViewController<LoginViewModel>
     {
         public new LoginView View
         {
@@ -15,6 +15,13 @@ namespace VacationsTracker.iOS.Views.Login
         public override void LoadView()
         {
             View = new LoginView();
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            NavigationController.NavigationBarHidden = true;
         }
     }
 }
